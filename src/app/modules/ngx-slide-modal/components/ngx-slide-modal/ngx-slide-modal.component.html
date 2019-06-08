@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="modal-header">
+    <div class="parent-wrapper">
+      <div class="parent" [ngStyle]="slide_title_property ? {
+        'width': parent_width,
+        'transform': parent_transform,
+        'transition': animate_speed + 'ms'
+        } : {}">
+        <ng-content select="[modal-title]">
+  
+        </ng-content>
+      </div>
+    </div>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal($event)">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="parent-wrapper">
+      <div class="parent"
+       [ngStyle]="{
+        'width': parent_width,
+        'transform': parent_transform,
+        'transition': animate_speed + 'ms'
+        }" #parent>
+        <ng-content select="[modal-body]">
+    
+        </ng-content>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" [style.display]="panel_num$.value == activePanel$.value ? 'block' : 'none'" class="btn btn-secondary" (click)="hideModal($event)"
+      #closeButton></button>
+      <button type="button" [style.display]="panel_num$.value != activePanel$.value ? 'block': 'none'" class="btn btn-primary"  (click)="incrementActivePanel()"
+        #nextButton></button>
+  </div>
+</div>

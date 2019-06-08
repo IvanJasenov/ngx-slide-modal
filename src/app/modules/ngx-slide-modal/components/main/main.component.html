@@ -1,0 +1,17 @@
+<ng-template #template>
+    <app-ngx-slide-modal 
+      [num_of_panel]="num_of_panel" 
+      [next_button_text]="next_button_text"
+      [close_button_text]="close_button_text"
+      [active_panel]="active_panel"
+      [slide_title]="slide_title"
+      (onHide)="isVisible = false; onClose.emit($event)"
+      (onNext)="onNext.emit($event)">
+        <ng-content select="[modal-title]" modal-title>
+          
+        </ng-content>
+        <ng-content select="[modal-body]" modal-body>
+  
+        </ng-content>
+    </app-ngx-slide-modal>
+</ng-template>
