@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-slide-modal": [
+        "dist/ngx-slide-modal"
+      ],
+      "ngx-slide-modal/*": [
+        "dist/ngx-slide-modal/*"
+      ]
+    }
   }
 }
