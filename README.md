@@ -1,6 +1,9 @@
 # Bootstrap Slide Modal for Angular 🔥 🔥 🔥
 
-![alt text](https://imgur.com/8n7H88Y)
+A Bootstrap slide modal module which fits perfectly for implementing welcome modal. 
+
+
+![alt text](https://i.imgur.com/8n7H88Y.png)
 
 ### Installation 🚴‍♂️
 
@@ -75,7 +78,7 @@ Use `ngx-slide-modal` component inside any of your component template which shar
 3) If `slide_title` input is set to `true`, the num of elements with `modal-title` directive also has to **match** the `num_of_panel` input 
 4) Element with `modal-body` directive has to have block display, which means `div` is an ideal element for wrapping the content of the modal body. 
 
-### API
+## API
 
 #### Input
 
